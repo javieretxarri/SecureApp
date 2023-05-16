@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "bcsecure2023",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/javieretxarri/BCSecure2023",
+      "state" : {
+        "branch" : "main",
+        "revision" : "c3c054b240364c59b6e8298c0a6a2c92f47045f9"
+      }
+    }
+  ],
+  "version" : 2
+}

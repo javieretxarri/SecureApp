@@ -13,6 +13,17 @@
 		F94BA7E52A0ED6F400A59A04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F94BA7E42A0ED6F400A59A04 /* Preview Assets.xcassets */; };
 		F94BA7E72A0ED6F400A59A04 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BA7E62A0ED6F400A59A04 /* Persistence.swift */; };
 		F94BA7EA2A0ED6F400A59A04 /* SecureApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F94BA7E82A0ED6F400A59A04 /* SecureApp.xcdatamodeld */; };
+		F94BA7F22A1224DA00A59A04 /* BCSecure2023 in Frameworks */ = {isa = PBXBuildFile; productRef = F94BA7F12A1224DA00A59A04 /* BCSecure2023 */; };
+		F94BA7F42A12251700A59A04 /* DataEncryptVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94BA7F32A12251700A59A04 /* DataEncryptVM.swift */; };
+		F99818F62A12A5CE00AB04A5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99818F52A12A5CE00AB04A5 /* Extensions.swift */; };
+		F99818F82A12AC9200AB04A5 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99818F72A12AC9200AB04A5 /* Enums.swift */; };
+		F9F72B3A2A12B7AD005BEE2F /* DataEncryptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B392A12B7AD005BEE2F /* DataEncryptView.swift */; };
+		F9F72B3C2A12B80D005BEE2F /* SecureDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B3B2A12B80D005BEE2F /* SecureDataView.swift */; };
+		F9F72B3E2A12C40A005BEE2F /* SecureDataViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B3D2A12C40A005BEE2F /* SecureDataViewVM.swift */; };
+		F9F72B462A12D05B005BEE2F /* Persons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B452A12D05B005BEE2F /* Persons.swift */; };
+		F9F72B482A12D08C005BEE2F /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B472A12D08C005BEE2F /* PersonsView.swift */; };
+		F9F72B4A2A12D0CE005BEE2F /* PersonsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B492A12D0CE005BEE2F /* PersonsVM.swift */; };
+		F9F72B4C2A12D2DF005BEE2F /* NewPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B4B2A12D2DF005BEE2F /* NewPersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +34,16 @@
 		F94BA7E42A0ED6F400A59A04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F94BA7E62A0ED6F400A59A04 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F94BA7E92A0ED6F400A59A04 /* SecureApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SecureApp.xcdatamodel; sourceTree = "<group>"; };
+		F94BA7F32A12251700A59A04 /* DataEncryptVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptVM.swift; sourceTree = "<group>"; };
+		F99818F52A12A5CE00AB04A5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F99818F72A12AC9200AB04A5 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F9F72B392A12B7AD005BEE2F /* DataEncryptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEncryptView.swift; sourceTree = "<group>"; };
+		F9F72B3B2A12B80D005BEE2F /* SecureDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataView.swift; sourceTree = "<group>"; };
+		F9F72B3D2A12C40A005BEE2F /* SecureDataViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureDataViewVM.swift; sourceTree = "<group>"; };
+		F9F72B452A12D05B005BEE2F /* Persons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persons.swift; sourceTree = "<group>"; };
+		F9F72B472A12D08C005BEE2F /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
+		F9F72B492A12D0CE005BEE2F /* PersonsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonsVM.swift; path = ../../../../Documents/PersonsVM.swift; sourceTree = "<group>"; };
+		F9F72B4B2A12D2DF005BEE2F /* NewPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F94BA7F22A1224DA00A59A04 /* BCSecure2023 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +77,12 @@
 		F94BA7DC2A0ED6F300A59A04 /* SecureApp */ = {
 			isa = PBXGroup;
 			children = (
-				F94BA7DD2A0ED6F300A59A04 /* SecureAppApp.swift */,
-				F94BA7DF2A0ED6F300A59A04 /* ContentView.swift */,
-				F94BA7E12A0ED6F400A59A04 /* Assets.xcassets */,
-				F94BA7E62A0ED6F400A59A04 /* Persistence.swift */,
-				F94BA7E82A0ED6F400A59A04 /* SecureApp.xcdatamodeld */,
+				F9F72B3F2A12C9DC005BEE2F /* View */,
+				F9F72B402A12C9E3005BEE2F /* ViewModel */,
+				F9F72B442A12D02B005BEE2F /* Models */,
+				F9F72B432A12CA23005BEE2F /* CoreData */,
+				F9F72B412A12C9F4005BEE2F /* Helper */,
+				F9F72B422A12C9FB005BEE2F /* System */,
 				F94BA7E32A0ED6F400A59A04 /* Preview Content */,
 			);
 			path = SecureApp;
@@ -71,6 +94,63 @@
 				F94BA7E42A0ED6F400A59A04 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9F72B3F2A12C9DC005BEE2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F94BA7DF2A0ED6F300A59A04 /* ContentView.swift */,
+				F9F72B3B2A12B80D005BEE2F /* SecureDataView.swift */,
+				F9F72B392A12B7AD005BEE2F /* DataEncryptView.swift */,
+				F9F72B472A12D08C005BEE2F /* PersonsView.swift */,
+				F9F72B4B2A12D2DF005BEE2F /* NewPersonView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F9F72B402A12C9E3005BEE2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9F72B3D2A12C40A005BEE2F /* SecureDataViewVM.swift */,
+				F94BA7F32A12251700A59A04 /* DataEncryptVM.swift */,
+				F9F72B492A12D0CE005BEE2F /* PersonsVM.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9F72B412A12C9F4005BEE2F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F99818F52A12A5CE00AB04A5 /* Extensions.swift */,
+				F99818F72A12AC9200AB04A5 /* Enums.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		F9F72B422A12C9FB005BEE2F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				F94BA7DD2A0ED6F300A59A04 /* SecureAppApp.swift */,
+				F94BA7E12A0ED6F400A59A04 /* Assets.xcassets */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		F9F72B432A12CA23005BEE2F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F94BA7E62A0ED6F400A59A04 /* Persistence.swift */,
+				F94BA7E82A0ED6F400A59A04 /* SecureApp.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		F9F72B442A12D02B005BEE2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9F72B452A12D05B005BEE2F /* Persons.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +169,9 @@
 			dependencies = (
 			);
 			name = SecureApp;
+			packageProductDependencies = (
+				F94BA7F12A1224DA00A59A04 /* BCSecure2023 */,
+			);
 			productName = SecureApp;
 			productReference = F94BA7DA2A0ED6F300A59A04 /* SecureApp.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +200,9 @@
 				Base,
 			);
 			mainGroup = F94BA7D12A0ED6F300A59A04;
+			packageReferences = (
+				F94BA7F02A1224DA00A59A04 /* XCRemoteSwiftPackageReference "BCSecure2023" */,
+			);
 			productRefGroup = F94BA7DB2A0ED6F300A59A04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,8 +229,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F72B3E2A12C40A005BEE2F /* SecureDataViewVM.swift in Sources */,
+				F9F72B482A12D08C005BEE2F /* PersonsView.swift in Sources */,
+				F94BA7F42A12251700A59A04 /* DataEncryptVM.swift in Sources */,
+				F99818F62A12A5CE00AB04A5 /* Extensions.swift in Sources */,
+				F9F72B3C2A12B80D005BEE2F /* SecureDataView.swift in Sources */,
+				F9F72B462A12D05B005BEE2F /* Persons.swift in Sources */,
+				F9F72B3A2A12B7AD005BEE2F /* DataEncryptView.swift in Sources */,
 				F94BA7E72A0ED6F400A59A04 /* Persistence.swift in Sources */,
+				F9F72B4A2A12D0CE005BEE2F /* PersonsVM.swift in Sources */,
 				F94BA7E02A0ED6F300A59A04 /* ContentView.swift in Sources */,
+				F9F72B4C2A12D2DF005BEE2F /* NewPersonView.swift in Sources */,
+				F99818F82A12AC9200AB04A5 /* Enums.swift in Sources */,
 				F94BA7EA2A0ED6F400A59A04 /* SecureApp.xcdatamodeld in Sources */,
 				F94BA7DE2A0ED6F300A59A04 /* SecureAppApp.swift in Sources */,
 			);
@@ -347,6 +443,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F94BA7F02A1224DA00A59A04 /* XCRemoteSwiftPackageReference "BCSecure2023" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/javieretxarri/BCSecure2023";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F94BA7F12A1224DA00A59A04 /* BCSecure2023 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F94BA7F02A1224DA00A59A04 /* XCRemoteSwiftPackageReference "BCSecure2023" */;
+			productName = BCSecure2023;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		F94BA7E82A0ED6F400A59A04 /* SecureApp.xcdatamodeld */ = {

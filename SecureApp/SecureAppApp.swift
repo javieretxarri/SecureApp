@@ -15,6 +15,9 @@ struct SecureAppApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    print(URL.documentsDirectory)
+                }
         }
     }
 }

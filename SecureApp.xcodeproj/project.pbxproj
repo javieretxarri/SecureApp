@@ -24,6 +24,9 @@
 		F9F72B482A12D08C005BEE2F /* PersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B472A12D08C005BEE2F /* PersonsView.swift */; };
 		F9F72B4A2A12D0CE005BEE2F /* PersonsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B492A12D0CE005BEE2F /* PersonsVM.swift */; };
 		F9F72B4C2A12D2DF005BEE2F /* NewPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B4B2A12D2DF005BEE2F /* NewPersonView.swift */; };
+		F9F72B4E2A1402E4005BEE2F /* PersonsViewCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B4D2A1402E4005BEE2F /* PersonsViewCD.swift */; };
+		F9F72B8C2A14BE16005BEE2F /* ObfuscateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B8B2A14BE15005BEE2F /* ObfuscateView.swift */; };
+		F9F72B922A14BF9D005BEE2F /* PersonasCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F72B902A14BF9D005BEE2F /* PersonasCD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		F9F72B472A12D08C005BEE2F /* PersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsView.swift; sourceTree = "<group>"; };
 		F9F72B492A12D0CE005BEE2F /* PersonsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonsVM.swift; path = ../../../../Documents/PersonsVM.swift; sourceTree = "<group>"; };
 		F9F72B4B2A12D2DF005BEE2F /* NewPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPersonView.swift; sourceTree = "<group>"; };
+		F9F72B4D2A1402E4005BEE2F /* PersonsViewCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewCD.swift; sourceTree = "<group>"; };
+		F9F72B8B2A14BE15005BEE2F /* ObfuscateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObfuscateView.swift; sourceTree = "<group>"; };
+		F9F72B902A14BF9D005BEE2F /* PersonasCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonasCD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +86,8 @@
 				F9F72B3F2A12C9DC005BEE2F /* View */,
 				F9F72B402A12C9E3005BEE2F /* ViewModel */,
 				F9F72B442A12D02B005BEE2F /* Models */,
-				F9F72B432A12CA23005BEE2F /* CoreData */,
 				F9F72B412A12C9F4005BEE2F /* Helper */,
+				F9F72B432A12CA23005BEE2F /* CoreData */,
 				F9F72B422A12C9FB005BEE2F /* System */,
 				F94BA7E32A0ED6F400A59A04 /* Preview Content */,
 			);
@@ -100,10 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				F94BA7DF2A0ED6F300A59A04 /* ContentView.swift */,
-				F9F72B3B2A12B80D005BEE2F /* SecureDataView.swift */,
 				F9F72B392A12B7AD005BEE2F /* DataEncryptView.swift */,
+				F9F72B3B2A12B80D005BEE2F /* SecureDataView.swift */,
 				F9F72B472A12D08C005BEE2F /* PersonsView.swift */,
+				F9F72B4D2A1402E4005BEE2F /* PersonsViewCD.swift */,
 				F9F72B4B2A12D2DF005BEE2F /* NewPersonView.swift */,
+				F9F72B8B2A14BE15005BEE2F /* ObfuscateView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,8 +119,8 @@
 		F9F72B402A12C9E3005BEE2F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				F9F72B3D2A12C40A005BEE2F /* SecureDataViewVM.swift */,
 				F94BA7F32A12251700A59A04 /* DataEncryptVM.swift */,
+				F9F72B3D2A12C40A005BEE2F /* SecureDataViewVM.swift */,
 				F9F72B492A12D0CE005BEE2F /* PersonsVM.swift */,
 			);
 			name = ViewModel;
@@ -139,6 +147,7 @@
 		F9F72B432A12CA23005BEE2F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F9F72B902A14BF9D005BEE2F /* PersonasCD.swift */,
 				F94BA7E62A0ED6F400A59A04 /* Persistence.swift */,
 				F94BA7E82A0ED6F400A59A04 /* SecureApp.xcdatamodeld */,
 			);
@@ -234,7 +243,10 @@
 				F94BA7F42A12251700A59A04 /* DataEncryptVM.swift in Sources */,
 				F99818F62A12A5CE00AB04A5 /* Extensions.swift in Sources */,
 				F9F72B3C2A12B80D005BEE2F /* SecureDataView.swift in Sources */,
+				F9F72B922A14BF9D005BEE2F /* PersonasCD.swift in Sources */,
+				F9F72B8C2A14BE16005BEE2F /* ObfuscateView.swift in Sources */,
 				F9F72B462A12D05B005BEE2F /* Persons.swift in Sources */,
+				F9F72B4E2A1402E4005BEE2F /* PersonsViewCD.swift in Sources */,
 				F9F72B3A2A12B7AD005BEE2F /* DataEncryptView.swift in Sources */,
 				F94BA7E72A0ED6F400A59A04 /* Persistence.swift in Sources */,
 				F9F72B4A2A12D0CE005BEE2F /* PersonsVM.swift in Sources */,

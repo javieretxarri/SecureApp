@@ -12,6 +12,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
+            PersonsViewCD()
+                .tabItem {
+                    Label("Persons CD", systemImage: "cylinder.split.1x2")
+                }
             PersonsView()
                 .tabItem {
                     Label("Persons", systemImage: "person")

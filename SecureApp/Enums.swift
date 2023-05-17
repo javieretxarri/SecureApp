@@ -20,3 +20,51 @@ enum HashCase: String, CaseIterable, Identifiable {
 
     var id: Self { self }
 }
+
+enum DataEncrypFields {
+    case ecnryptText, hashText, hashCompareText
+
+    mutating func next() {
+        switch self {
+        case .ecnryptText:
+            self = .hashText
+        case .hashText:
+            self = .hashCompareText
+        case .hashCompareText:
+            self = .ecnryptText
+        }
+    }
+
+    mutating func prev() {
+        switch self {
+        case .ecnryptText:
+            self = .hashCompareText
+        case .hashText:
+            self = .ecnryptText
+        case .hashCompareText:
+            self = .hashText
+        }
+    }
+}
+
+enum SecureDataFields {
+    case plainText, secureText
+
+    mutating func next() {
+        switch self {
+        case .plainText:
+            self = .secureText
+        case .secureText:
+            self = .plainText
+        }
+    }
+
+    mutating func prev() {
+        switch self {
+        case .plainText:
+            self = .secureText
+        case .secureText:
+            self = .plainText
+        }
+    }
+}

@@ -9,17 +9,17 @@ import SwiftUI
 
 struct NewPersonView: View {
     @Environment(\.dismiss) var dismiss
-    @Binding var persons: [Persons]
 
     @State var name = ""
     @State var email = ""
+
+    let saveFunc: (String, String) -> ()
 
     var body: some View {
         VStack {
             Text("New Person")
                 .font(.largeTitle)
                 .bold()
-                .padding(.top, 20)
             Form {
                 VStack(alignment: .leading) {
                     Text("Name")
@@ -35,6 +35,7 @@ struct NewPersonView: View {
                         .textContentType(.emailAddress)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
+                        .keyboardType(.emailAddress)
                 }
 
                 HStack {
@@ -45,8 +46,7 @@ struct NewPersonView: View {
                     }
                     Spacer()
                     Button {
-                        let new = Persons(name: name, email: email)
-                        persons.append(new)
+                        saveFunc(name, email)
                         name = ""
                         email = ""
                     } label: {
@@ -62,6 +62,6 @@ struct NewPersonView: View {
 
 struct NewPersonView_Previews: PreviewProvider {
     static var previews: some View {
-        NewPersonView(persons: .constant([.test]))
+        NewPersonView { _, _ in }
     }
 }

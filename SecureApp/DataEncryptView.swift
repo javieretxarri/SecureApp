@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DataEncryptView: View {
     @StateObject var vm = DataEncryptVM()
+    @FocusState var focusField: DataEncrypFields?
 
     var body: some View {
         Form {
@@ -18,6 +19,11 @@ struct DataEncryptView: View {
                         .font(.headline)
                     TextField("Enter the text", text: $vm.textNormal, axis: .vertical)
                         .lineLimit(3, reservesSpace: true)
+                        .focused($focusField, equals: .ecnryptText)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            focusField?.next()
+                        }
                 }
                 VStack(alignment: .leading) {
                     Text("Encrypted content")
@@ -75,6 +81,11 @@ struct DataEncryptView: View {
                         .font(.headline)
                     TextField("Enter the text", text: $vm.text2Hash, axis: .vertical)
                         .lineLimit(3, reservesSpace: true)
+                        .focused($focusField, equals: .hashText)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            focusField?.next()
+                        }
                 }
                 VStack(alignment: .leading) {
                     Text("Hashed content")
@@ -90,6 +101,11 @@ struct DataEncryptView: View {
                         .font(.headline)
                     TextField("Enter the text", text: $vm.text2Compare, axis: .vertical)
                         .lineLimit(3, reservesSpace: true)
+                        .focused($focusField, equals: .hashCompareText)
+                        .submitLabel(.next)
+                        .onSubmit {
+                            focusField?.next()
+                        }
                 }
 
                 Text(vm.result.isEmpty ? "There is not comparison" : vm.result)
@@ -126,6 +142,28 @@ struct DataEncryptView: View {
 
             } header: {
                 Text("HASH")
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                HStack {
+                    Button {
+                        focusField?.prev()
+                    } label: {
+                        Image(systemName: "chevron.up")
+                    }
+                    Button {
+                        focusField?.next()
+                    } label: {
+                        Image(systemName: "chevron.down")
+                    }
+                    Spacer()
+                    Button {
+                        focusField = nil
+                    } label: {
+                        Image(systemName: "keyboard")
+                    }
+                }
             }
         }
     }

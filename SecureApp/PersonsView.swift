@@ -33,7 +33,7 @@ struct PersonsView: View {
                             Image(systemName: "square.and.arrow.down")
                         }
                         Button {
-                            vm.saveSecPersons()
+                            vm.saveSecPersonsEmail()
                         } label: {
                             Image(systemName: "square.and.arrow.down")
                         }
@@ -54,7 +54,7 @@ struct PersonsView: View {
                             Image(systemName: "square.and.arrow.up")
                         }
                         Button {
-                            vm.loadSecPersons()
+                            vm.loadSecPersonsEmail()
                         } label: {
                             Image(systemName: "square.and.arrow.up")
                         }
@@ -70,9 +70,12 @@ struct PersonsView: View {
             }
         }
         .sheet(isPresented: $showNew) {
-            NewPersonView(persons: $vm.persons)
-                .presentationDetents([.medium, .large])
-                .presentationContentInteraction(.automatic)
+            NewPersonView { name, email in
+                let new = Persons(name: name, email: email)
+                vm.persons.append(new)
+            }
+            .presentationDetents([.medium])
+            .presentationContentInteraction(.automatic)
         }
     }
 }

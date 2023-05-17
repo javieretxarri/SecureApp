@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SecureDataView: View {
     @ObservedObject var vm = SecureDataViewVM()
-    
+    @FocusState var focusField: SecureDataFields?
+
     var body: some View {
         Form {
             Section {
@@ -29,7 +30,12 @@ struct SecureDataView: View {
             Section {
                 TextField("Enter the text", text: $vm.texto2Guardar, axis: .vertical)
                     .lineLimit(3, reservesSpace: true)
-                
+                    .focused($focusField, equals: .plainText)
+                    .submitLabel(.next)
+                    .onSubmit {
+                        focusField?.next()
+                    }
+
                 HStack {
                     Button {
                         vm.doPersistence()
@@ -43,7 +49,7 @@ struct SecureDataView: View {
                         Text("Retrieve")
                     }
                 }
-                
+
                 VStack(alignment: .leading) {
                     Text("Persisted text")
                         .font(.headline)
@@ -55,11 +61,16 @@ struct SecureDataView: View {
             } header: {
                 Text("Persistencia")
             }
-            
+
             Section {
                 TextField("Enter the text", text: $vm.secTexto2Guardar, axis: .vertical)
                     .lineLimit(3, reservesSpace: true)
-                
+                    .focused($focusField, equals: .secureText)
+                    .submitLabel(.next)
+                    .onSubmit {
+                        focusField?.next()
+                    }
+
                 HStack {
                     Button {
                         vm.doSecurePersistence()
@@ -73,7 +84,7 @@ struct SecureDataView: View {
                         Text("Retrieve")
                     }
                 }
-                
+
                 VStack(alignment: .leading) {
                     Text("Secure Persisted text")
                         .font(.headline)
@@ -88,6 +99,28 @@ struct SecureDataView: View {
         }
         .textFieldStyle(.roundedBorder)
         .buttonStyle(.bordered)
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                HStack {
+                    Button {
+                        focusField?.prev()
+                    } label: {
+                        Image(systemName: "chevron.up")
+                    }
+                    Button {
+                        focusField?.next()
+                    } label: {
+                        Image(systemName: "chevron.down")
+                    }
+                    Spacer()
+                    Button {
+                        focusField = nil
+                    } label: {
+                        Image(systemName: "keyboard")
+                    }
+                }
+            }
+        }
     }
 }
 
